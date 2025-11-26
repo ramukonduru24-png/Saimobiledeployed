@@ -143,13 +143,13 @@ const Header = () => {
               >
                 Home
               </Link>
-              <a
-                href="#arrivals"
+              <Link
+                to="/#arrivals"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 New Arrivals
-              </a>
+              </Link>
               <div className="py-2">
                 <p className="font-semibold text-foreground mb-2">Categories</p>
                 <div className="pl-4 flex flex-col gap-2">
@@ -165,20 +165,20 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-              <a
-                href="#testimonials"
+              <Link
+                to="/#testimonials"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reviews
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/#contact"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
           </div>
         )}
