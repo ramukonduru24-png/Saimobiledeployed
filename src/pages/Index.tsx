@@ -32,7 +32,22 @@ import trendPowerbanks from "@/assets/trend-temple.jpg";
 
 
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace("#", ""));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
   const arrivals = [
     { id: "arr1", image: arrival1, title: "iPhone 15 Pro Max", description: "Space Black, 256GB", price: 134900 },
     { id: "arr2", image: arrival2, title: "iPhone 15 Pro", description: "Blue Titanium, 128GB", price: 119900 },
@@ -45,21 +60,21 @@ const Index = () => {
   ];
 
   const categories = [
-    { image: catIphones, title: "iPhones" },
-    { image: catAndroid, title: "Android Mobiles" },
-    { image: catPouches, title: "Cases & Pouches" },
-    { image: catChargers, title: "Chargers" },
-    { image: catEarphones, title: "Earphones" },
-    { image: catAccessories, title: "Accessories" },
+    { image: catIphones, title: "iPhones", href: "/iphones" },
+    { image: catAndroid, title: "Android Mobiles", href: "/android" },
+    { image: catPouches, title: "Cases & Pouches", href: "/cases" },
+    { image: catChargers, title: "Chargers", href: "/chargers" },
+    { image: catEarphones, title: "Earphones", href: "/audio" },
+    { image: catAccessories, title: "Accessories", href: "/accessories" },
   ];
 
   const trends = [
-    { image: trendFlagship, title: "Flagship 2024" },
-    { image: trendBudget, title: "Budget Phones" },
-    { image: trendFoldable, title: "Foldable Phones" },
-    { image: trendEarbuds, title: "Wireless Earbuds" },
-    { image: trendWatches, title: "Smartwatches" },
-    { image: trendPowerbanks, title: "Power Banks" },
+    { image: trendFlagship, title: "Flagship 2024", href: "/iphones" },
+    { image: trendBudget, title: "Budget Phones", href: "/android" },
+    { image: trendFoldable, title: "Foldable Phones", href: "/android" },
+    { image: trendEarbuds, title: "Wireless Earbuds", href: "/audio" },
+    { image: trendWatches, title: "Smartwatches", href: "/accessories" },
+    { image: trendPowerbanks, title: "Power Banks", href: "/chargers" },
   ];
 
   const testimonials = [

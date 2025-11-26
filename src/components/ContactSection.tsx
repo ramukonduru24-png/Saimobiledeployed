@@ -38,8 +38,8 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-card p-6 rounded-xl shadow-elegant">
-              <h3 className="text-2xl font-heading font-semibold mb-6 text-foreground">Get in Touch</h3>
+            <div className="bg-white p-6 rounded-xl shadow-elegant">
+              <h3 className="text-2xl font-heading font-semibold mb-6 text-black">Get in Touch</h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -47,8 +47,8 @@ const ContactSection = () => {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Address</p>
-                    <p className="text-muted-foreground">
+                    <p className="font-medium text-black">Address</p>
+                    <p className="text-gray-600">
                       KG Road, SVS Nagar, 1st line<br />
                       Doranala, Ayinamukkala<br />
                       Andhra Pradesh 523331
@@ -61,8 +61,8 @@ const ContactSection = () => {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <a href="tel:09110723175" className="text-muted-foreground hover:text-primary transition-colors">
+                    <p className="font-medium text-black">Phone</p>
+                    <a href="tel:09110723175" className="text-gray-600 hover:text-primary transition-colors">
                       09110 723175
                     </a>
                   </div>
@@ -73,8 +73,8 @@ const ContactSection = () => {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <a href="mailto:info@sivasaicellpoint.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    <p className="font-medium text-black">Email</p>
+                    <a href="mailto:info@sivasaicellpoint.com" className="text-gray-600 hover:text-primary transition-colors">
                       info@sivasaicellpoint.com
                     </a>
                   </div>
@@ -85,8 +85,8 @@ const ContactSection = () => {
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Working Hours</p>
-                    <p className="text-muted-foreground">
+                    <p className="font-medium text-black">Working Hours</p>
+                    <p className="text-gray-600">
                       Mon - Sat: 10:00 AM - 9:00 PM<br />
                       Sunday: 11:00 AM - 7:00 PM
                     </p>
@@ -111,8 +111,8 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card p-8 rounded-xl shadow-elegant">
-            <h3 className="text-2xl font-heading font-semibold mb-6 text-foreground">Send us a Message</h3>
+          <div className="bg-white p-8 rounded-xl shadow-elegant">
+            <h3 className="text-2xl font-heading font-semibold mb-6 text-black">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
@@ -120,7 +120,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="bg-background"
+                  className="bg-white text-black placeholder:text-gray-400 border-gray-200 focus:border-primary"
                 />
               </div>
               <div>
@@ -130,7 +130,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="bg-background"
+                  className="bg-white text-black placeholder:text-gray-400 border-gray-200 focus:border-primary"
                 />
               </div>
               <div>
@@ -139,7 +139,7 @@ const ContactSection = () => {
                   placeholder="Your Phone Number"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="bg-background"
+                  className="bg-white text-black placeholder:text-gray-400 border-gray-200 focus:border-primary"
                 />
               </div>
               <div>
@@ -149,12 +149,12 @@ const ContactSection = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   rows={5}
-                  className="bg-background"
+                  className="bg-white text-black placeholder:text-gray-400 border-gray-200 focus:border-primary"
                 />
               </div>
               <Button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-tech"
+                className="w-full bg-primary hover:bg-primary/90 text-white shadow-tech"
                 size="lg"
               >
                 Send Message

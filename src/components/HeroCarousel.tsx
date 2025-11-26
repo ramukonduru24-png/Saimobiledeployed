@@ -42,14 +42,13 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+    <section className="relative h-[80vh] md:h-[90vh] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={slide.image}
@@ -57,7 +56,7 @@ const HeroCarousel = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-          
+
           {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center text-center">
             <div className="max-w-4xl px-4 animate-fade-in-up">
@@ -67,9 +66,9 @@ const HeroCarousel = () => {
               <p className="text-lg md:text-2xl text-white/90 mb-8 drop-shadow-md">
                 {slide.subtitle}
               </p>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-tech px-8 py-6 text-lg font-medium"
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white shadow-tech px-8 py-6 text-lg font-medium"
                 onClick={() => document.getElementById('arrivals')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Shop Now
@@ -101,9 +100,8 @@ const HeroCarousel = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide ? "w-12 bg-primary" : "w-2 bg-white/50"
-            }`}
+            className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "w-12 bg-primary" : "w-2 bg-white/50"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
